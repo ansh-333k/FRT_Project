@@ -5,15 +5,54 @@
 		<meta name="application-name" content="TRAWELL">
 		<meta name="description" content="Microsoft Future Ready Talent Project">
 		<meta name="author" content="ANSH KUSHWAHA">
-		<meta name="color-scheme" content="dark">
-		<meta name="theme-color" content="black" media="(prefers-color-scheme: dark)">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <noscript>JavaScript Error !!! :- Not Supported OR Currenlty Blocked by Your Browser</noscript>
+		<link rel="stylesheet" href="./static/css/style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css">
         <title>TraWell</title>
 	</head>
 	<body>
-
-        <link rel="stylesheet" href="./static/css/style.css">
-        <script type="application/javascript" src="./static/js/script.js"></script>
+		<header>
+			<div class="logo">
+				<img src="https://trawell.blob.core.windows.net/img/Logo.png" alt="TraWell Logo" >
+			</div>
+			<div class="logotext">
+				<h1>TraWell</h1>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#footer">About</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div id="app">
+			<router-view></router-view>
+		</div>
+		<footer id="footer">
+			<div class="container">
+			  	<div class="contributors">
+					<span>Contributors: </span>
+					<a href="https://www.linkedin.com/in/ansh333k" style="text-decoration: none;"><span>Ansh Kushwaha</span></a>
+					<a href="https://www.linkedin.com/in/ashish-kumar-2a63831b1/" style="text-decoration: none;""><span>Ashish Kumar</span></a>
+					<a href="https://www.linkedin.com/in/kundan-kumar-926391252"  style="text-decoration: none;""><span>Kundan Kumar</span></a>
+					<a href="https://www.linkedin.com/in/prakashbist28/"  style="text-decoration: none;""><span>Prakash Bist</span></a>
+			  	</div>
+			  	<div class="follow-us">
+					<span>Follow us:</span>
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-snapchat"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+			  	</div>
+			  	<div class="footer-text">
+					<p>&copy; 2023  All rights reserved.</p>
+					<p>Made with ❤️ by our team</p>
+			  	</div>
+			</div>
+		</footer>
+		<script src="https://unpkg.com/vue@3.2.47/dist/vue.global.js"></script>
+    	<script src="https://unpkg.com/vue-router@4.0.15/dist/vue-router.global.js"></script>
+		<script type="application/javascript" src="./static/js/script.js"></script>
 	</body>
 </html>
