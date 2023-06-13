@@ -63,6 +63,8 @@ const Category = {
       if(res.status == 200) {
         res.json().then((data) => {
           this.response = data
+          console.log(data)
+          console.log(this.$route.params.category)
         })
       }
     })
