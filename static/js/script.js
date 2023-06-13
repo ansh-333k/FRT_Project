@@ -63,51 +63,34 @@ const Category = {
       if(res.status == 200) {
         res.json().then((data) => {
           this.response = data
-          console.log(data)
-          console.log(this.$route.params.category)
         })
       }
     })
     .catch(error => { console.log(error) })
   },
   template: `
-    <form @submit.prevent="validate">
-      <center>
-        <br>
-        <h2> Register Yourself </h2>
-        <br>
-        <div>
-          <label> E-Mail ID: &nbsp;</label>
-          <input type="email" placeholder="E-Mail ID" v-model="email" autocomplete="on" autofocus required>
+    <div v-for="place in response" class="destination-card">
+      <div class="carousel-group">
+        <div class="carousel">
+          <div class="carousel-item active"><img :src="place.img1" alt="Image 1"></div>
+          <div class="carousel-item"><img :src="place.img2" alt="Image 2"></div>
+          <div class="carousel-item"><img :src="place.img3" alt="Image 3"></div>
+          <div class="carousel-item"><img :src="place.img4" alt="Image 4"></div>
+          <div class="carousel-item"><img :src="place.img5" alt="Image 5"></div>
+          <div class="carousel-item"><img :src="place.img6" alt="Image 6"></div>
         </div>
-        <br>
-        <div>
-          <label> Password: &nbsp;</label>
-          <input type="password" placeholder="Password" v-model="password" autocomplete="on" autofocus required>
+      </div>
+      <div class="destination-details">
+        <div class="destination">
+          <h2 class="destination-name">{{ place.name }}</h2>
+          <div class="rating">Rating: {{ place.rating }}/5</div>
         </div>
-        <br>
-        <div>
-          <label> Re-Enter Password: &nbsp;</label>
-          <input type="password" placeholder="Retype Password" v-model="cnf_pass" autocomplete="on" autofocus required>
-        </div>
-        <br>
-        <div>
-          <label> Choose your Role: &nbsp;</label>
-          <select v-model="role" autocomplete="on" autofocus required>
-            <option value=2> Administrator </option>
-            <option value=1> Support Staff </option>
-            <option value=0> Student </option>
-          </select>
-        </div>
-        <br>
-        <button type="submit" class="btn btn-outline-primary"> Register </button>
-        <br>
-      </center>
-    </form>
-    <center><h3> Already Registered? <router-link to="/"> LogIn </router-link></h3></center>
-    <center v-if="error" class="alert alert-warning" role="alert">
-      <p>{{error}}</p>
-    </center>
+        <p class="location">Location: {{ place.location }}</p>
+        <p class="caption">{{ place.caption }}</p>
+        <p class="text">{{ place.description }}</p>
+        <p class="best-time">Best Time to Visit: {{ place.best_time }}</p>
+      </div>
+    </div>
   ` 
 }
 
