@@ -38,7 +38,7 @@ const Home = {
       </div>
       <section class="category-grid">
         <div v-for="category in response" class="category">
-          <router-link :to="{ name: '#', params: { category: category.name } }">
+          <router-link :to="{ name: 'Category', params: { category: category.name } }">
             <img :src="category.image" :alt="category.name"></a>
             <h3> {{ category.name }} </h3>
           </router-link>
@@ -110,8 +110,8 @@ const Category = {
 }
 
 const routes = [
-  { path: '/', component: Home },
-  { path: '/#/:category', component: Category },
+  { name: 'Home', path: '/', component: Home },
+  { name: 'Category', path: '/:category', component: Category },
 ]
 
 const router = VueRouter.createRouter({
