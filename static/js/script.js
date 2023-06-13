@@ -12,7 +12,6 @@ const Home = {
       headers: { "Content-Type":"application/json", },
     })
     .then((res) => {
-      console.log(res)
       if(res.status == 200) {
         res.json().then((data) => {
           this.response = data
@@ -39,7 +38,7 @@ const Home = {
       </div>
       <section v-for="category in response" class="category-grid">
         <div class="category">
-          <router-link to="/">
+          <router-link to="/{{category.name}}">
             <img :src="category.image" :alt="category.name"></a>
             <h3> {{ category.name }} </h3>
           </router-link>
@@ -52,41 +51,22 @@ const Home = {
 const Category = { 
   data() {
     return {
-      email:null,
-      password:null,
-      cnf_pass:null,
-      role:null,
-      error:null,
+      response: null,
     }
   },
-  methods: {
-    validate() {
-      pattern = /^[\w-\.]+@[\w-\.]*(iitm.ac.in)$/
-      if(!this.email.match(pattern)) {
-        this.error="Invalid E-Mail ID"
-      }
-      else if(this.password!=this.cnf_pass) { 
-          this.error="Password Mismatch"
-      }
-      else {
-        fetch(host + '/', {
-          method: "POST",
-          headers: { "Content-Type":"application/json", },
-          body: JSON.stringify({email:this.email,password:this.password,role:this.role}),
+  beforeCreate() {
+    fetch(host + `/india/${this.$route.params.category}`, {
+      method: "GET",
+      headers: { "Content-Type":"application/json", },
+    })
+    .then((res) => {
+      if(res.status == 200) {
+        res.json().then((data) => {
+          this.response = data
         })
-        .then((res) => {
-          if(res.status == 400) {
-            this.error="User Already Registered"
-          }
-          else if(res.status == 200) {
-            this.$router.push({
-              path: `/${this.email}`
-            })
-          }
-        })
-        .catch(error => { console.log(error) })
       }
-    }
+    })
+    .catch(error => { console.log(error) })
   },
   template: `
     <form @submit.prevent="validate">
