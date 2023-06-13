@@ -36,9 +36,9 @@ const Home = {
       <div class="animated-heading">
         <h2 style="text-align: center;font-size: 40px;font-family:Arial, Helvetica, sans-serif;">Categories</h2>
       </div>
-      <section v-for="category in response" class="category-grid">
-        <div class="category">
-          <router-link to="/{{category.name}}">
+      <section class="category-grid">
+        <div v-for="category in response" class="category">
+          <router-link to="/${category.name}">
             <img :src="category.image" :alt="category.name"></a>
             <h3> {{ category.name }} </h3>
           </router-link>
