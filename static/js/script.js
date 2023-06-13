@@ -38,7 +38,7 @@ const Home = {
       </div>
       <section class="category-grid">
         <div v-for="category in response" class="category">
-          <router-link to="/${category.name}">
+          <router-link :to="{ name: 'india', params: { category.name } }">
             <img :src="category.image" :alt="category.name"></a>
             <h3> {{ category.name }} </h3>
           </router-link>
