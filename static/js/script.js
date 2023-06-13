@@ -111,7 +111,7 @@ const Category = {
 
 const routes = [
   { path: '/', component: Home },
-  { path: '#/:category', component: Category },
+  { path: '/#/:category', component: Category },
 ]
 
 const router = VueRouter.createRouter({
