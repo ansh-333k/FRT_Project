@@ -84,46 +84,13 @@ const Category = {
         <p class="caption">{{ place.caption }}</p>
         <p class="best-time">Best Time to Visit: {{ place.best_time }}</p>
         <p class="text">
-          {{ place.description.substring(0,50) }}
+          {{ place.description.substring(0,500) }}
           <span class="dots"> ...</span>
-          <span class="moreText">{{ place.description.substring(51) }}</span>
+          <span class="moreText">{{ place.description.substring(501) }}</span>
         </p>
         <button class="read-more-btn">Read More</button> 
       </div>
     </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function(event) {
-      var carouselGroups = document.querySelectorAll('.carousel-group');
-      carouselGroups.forEach(function(group) {
-        var carouselItems = group.querySelectorAll('.carousel-item');
-        var totalItems = carouselItems.length;
-        var currentItem = 0;
-        function showItem(index) {
-          carouselItems.forEach(function(item) {
-            item.classList.remove('active');
-          });
-          carouselItems[index].classList.add('active');
-        }
-        function nextItem() {
-          currentItem = (currentItem + 1) % totalItems;
-          showItem(currentItem);
-        }
-        setInterval(nextItem, 3000); // Automatically switch to next item every 3 seconds
-        // Show the initial item
-        showItem(currentItem);
-      });
-      });
-      const readMoreBtn = document.querySelector(".read-more-btn");
-      const text = document.querySelector(".text");
-      readMoreBtn.addEventListener("click", (e) => {
-        text.classList.toggle("show-more");
-        if (readMoreBtn.innerText === "Read More") {
-            readMoreBtn.innerText = "Read Less";
-        } else {
-            readMoreBtn.innerText = "Read More";
-        }
-      });
-    </script>
   ` 
 }
 
