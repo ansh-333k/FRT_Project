@@ -15,10 +15,10 @@
 	<body>
 		<header>
 			<div class="logo">
-				<img src="https://trawell.blob.core.windows.net/img/Logo.png" alt="TraWell Logo" >
+				<img src="https://trawell.blob.core.windows.net/img/TraWell%20Logo.png" alt="TraWell Logo" >
 			</div>
 			<div class="logotext">
-				<h1>TraWell</h1>
+				<a href="/"><h1>TraWell</h1></a>
 			</div>
 			<nav>
 				<ul>
@@ -52,38 +52,38 @@
 			</div>
 		</footer>
 		<script>
-			document.addEventListener("DOMContentLoaded", function(event) {
-			var carouselGroups = document.querySelectorAll('.carousel-group');
-			carouselGroups.forEach(function(group) {
-			  var carouselItems = group.querySelectorAll('.carousel-item');
-			  var totalItems = carouselItems.length;
-			  var currentItem = 0;
-			  function showItem(index) {
-				carouselItems.forEach(function(item) {
-				  item.classList.remove('active');
-				});
-				carouselItems[index].classList.add('active');
-			  }
-			  function nextItem() {
-				currentItem = (currentItem + 1) % totalItems;
-				showItem(currentItem);
-			  }
-			  setInterval(nextItem, 3000); // Automatically switch to next item every 3 seconds
-			  // Show the initial item
-			  showItem(currentItem);
-			});
-			});
-			const readMoreBtn = document.querySelector(".read-more-btn");
-			const text = document.querySelector(".text");
-			readMoreBtn.addEventListener("click", (e) => {
-			  text.classList.toggle("show-more");
-			  if (readMoreBtn.innerText === "Read More") {
-				  readMoreBtn.innerText = "Read Less";
-			  } else {
-				  readMoreBtn.innerText = "Read More";
-			  }
-			});
-		  </script>
+      document.addEventListener("DOMContentLoaded", function(event) {
+      var carouselGroups = document.querySelectorAll('.carousel-group');
+      carouselGroups.forEach(function(group) {
+        var carouselItems = group.querySelectorAll('.carousel-item');
+        var totalItems = carouselItems.length;
+        var currentItem = 0;
+        function showItem(index) {
+          carouselItems.forEach(function(item) {
+            item.classList.remove('active');
+          });
+          carouselItems[index].classList.add('active');
+        }
+        function nextItem() {
+          currentItem = (currentItem + 1) % totalItems;
+          showItem(currentItem);
+        }
+        setInterval(nextItem, 3000); // Automatically switch to next item every 3 seconds
+        // Show the initial item
+        showItem(currentItem);
+      });
+      });
+      const readMoreBtn = document.querySelector(".read-more-btn");
+      const text = document.querySelector(".text");
+      readMoreBtn.addEventListener("click", (e) => {
+        text.classList.toggle("show-more");
+        if (readMoreBtn.innerText === "Read More") {
+            readMoreBtn.innerText = "Read Less";
+        } else {
+            readMoreBtn.innerText = "Read More";
+        }
+      });
+    </script>
 		<script src="https://unpkg.com/vue@3.2.47/dist/vue.global.js"></script>
     	<script src="https://unpkg.com/vue-router@4.0.15/dist/vue-router.global.js"></script>
 		<script type="application/javascript" src="./static/js/script.js"></script>

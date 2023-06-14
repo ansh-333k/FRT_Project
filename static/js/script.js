@@ -34,7 +34,7 @@ const Home = {
       <section class="category-grid">
         <div v-for="category in response" class="category">
           <router-link :to="{ name: 'Category', params: { category: category.name } }">
-            <img :src="category.image" :alt="category.name"></a>
+            <img :src="category.image" :alt="category.name">
             <h3> {{ category.name }} </h3>
           </router-link>
         </div>
@@ -63,6 +63,28 @@ const Category = {
     })
     .catch(error => { console.log(error) })
   },
+  beforeMount() {
+    var carouselGroups = document.querySelectorAll('.carousel-group');
+    carouselGroups.forEach(function(group) {
+      var carouselItems = group.querySelectorAll('.carousel-item');
+      var totalItems = carouselItems.length;
+      var currentItem = 0;
+      function showItem(index) {
+        carouselItems.forEach(function(item) {
+          item.classList.remove('active');
+        });
+        carouselItems[index].classList.add('active');
+      }
+      function nextItem() {
+        currentItem = (currentItem + 1) % totalItems;
+        showItem(currentItem);
+      }
+      setInterval(nextItem, 3000); // Automatically switch to next item every 3 seconds
+      // Show the initial item
+      showItem(currentItem);
+    });
+  },
+  
   template: `
     <div v-for="place in response" class="destination-card">
       <div class="carousel-group">
@@ -75,7 +97,7 @@ const Category = {
           <div class="carousel-item"><img :src="place.img6" alt="Image 6"></div>
         </div>
       </div>
-      <div class="destination-details">
+      <div class="destination-details" style="background: linear-gradient(to top,rgb(0, 221, 255), #ffffff);">
         <div class="destination">
           <h2 class="destination-name">{{ place.name }}</h2>
           <div class="rating">Rating: {{ place.rating }}/5</div>
@@ -84,9 +106,9 @@ const Category = {
         <p class="caption">{{ place.caption }}</p>
         <p class="best-time">Best Time to Visit: {{ place.best_time }}</p>
         <p class="text">
-          {{ place.description.substring(0,500) }}
+          {{ place.description.substring(0,300) }}
           <span class="dots"> ...</span>
-          <span class="moreText">{{ place.description.substring(501) }}</span>
+          <span class="moreText">{{ place.description.substring(301) }}</span>
         </p>
         <button class="read-more-btn">Read More</button> 
       </div>
