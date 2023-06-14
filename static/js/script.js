@@ -63,28 +63,6 @@ const Category = {
     })
     .catch(error => { console.log(error) })
   },
-  Mounted() {
-    var carouselGroups = document.querySelectorAll('.carousel-group');
-    carouselGroups.forEach(function(group) {
-      var carouselItems = group.querySelectorAll('.carousel-item');
-      var totalItems = carouselItems.length;
-      var currentItem = 0;
-      function showItem(index) {
-        carouselItems.forEach(function(item) {
-          item.classList.remove('active');
-        });
-        carouselItems[index].classList.add('active');
-      }
-      function nextItem() {
-        currentItem = (currentItem + 1) % totalItems;
-        showItem(currentItem);
-      }
-      setInterval(nextItem, 3000); // Automatically switch to next item every 3 seconds
-      // Show the initial item
-      showItem(currentItem);
-    });
-  },
-
   template: `
     <div v-for="place in response" class="destination-card">
       <div class="carousel-group">
