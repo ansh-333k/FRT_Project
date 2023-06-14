@@ -21,15 +21,10 @@ const Home = {
     .catch(error => { console.log(error) })
   },
   template: `
-    <section style="padding: 50.0;"> 	
-      <div class="bannerimage">
-        <div class="image-blur">
-          <img src="https://trawell.blob.core.windows.net/img/Banner.jpg" alt="Banner">
-        </div>
-        <div class="image-text">
-          <p>Incredible India!</p>  
-          <h1>Be the part of this Wonderful Journey</h1>
-        </div>  
+    <section id="hero" style="padding: 50.0;"> 	
+      <div class="hero-content">
+        <h2>Incredible India!</h2>
+        <h3>Be the part of this wonderful journey.</h3>
       </div>
     </section>
     <main id="home">
@@ -87,10 +82,48 @@ const Category = {
         </div>
         <p class="location">Location: {{ place.location }}</p>
         <p class="caption">{{ place.caption }}</p>
-        <p class="text">{{ place.description }}</p>
         <p class="best-time">Best Time to Visit: {{ place.best_time }}</p>
+        <p class="text">
+          {{ place.description.substring(0,50) }}
+          <span class="dots"> ...</span>
+          <span class="moreText">{{ place.description.substring(51) }}</span>
+        </p>
+        <button class="read-more-btn">Read More</button> 
       </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(event) {
+      var carouselGroups = document.querySelectorAll('.carousel-group');
+      carouselGroups.forEach(function(group) {
+        var carouselItems = group.querySelectorAll('.carousel-item');
+        var totalItems = carouselItems.length;
+        var currentItem = 0;
+        function showItem(index) {
+          carouselItems.forEach(function(item) {
+            item.classList.remove('active');
+          });
+          carouselItems[index].classList.add('active');
+        }
+        function nextItem() {
+          currentItem = (currentItem + 1) % totalItems;
+          showItem(currentItem);
+        }
+        setInterval(nextItem, 3000); // Automatically switch to next item every 3 seconds
+        // Show the initial item
+        showItem(currentItem);
+      });
+      });
+      const readMoreBtn = document.querySelector(".read-more-btn");
+      const text = document.querySelector(".text");
+      readMoreBtn.addEventListener("click", (e) => {
+        text.classList.toggle("show-more");
+        if (readMoreBtn.innerText === "Read More") {
+            readMoreBtn.innerText = "Read Less";
+        } else {
+            readMoreBtn.innerText = "Read More";
+        }
+      });
+    </script>
   ` 
 }
 
