@@ -63,7 +63,7 @@ const Category = {
     })
     .catch(error => { console.log(error) })
   },
-  beforeMount() {
+  Mounted() {
     var carouselGroups = document.querySelectorAll('.carousel-group');
     carouselGroups.forEach(function(group) {
       var carouselItems = group.querySelectorAll('.carousel-item');
@@ -84,7 +84,7 @@ const Category = {
       showItem(currentItem);
     });
   },
-  
+
   template: `
     <div v-for="place in response" class="destination-card">
       <div class="carousel-group">
