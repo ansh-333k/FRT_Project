@@ -151,15 +151,19 @@ footer {
 }
 
 .container {
-  height: 150px;
+  height:150px;
   max-width: 900px;
   margin: 0 auto;
 }
 
+.contributors{
+  margin-bottom:15px ;
+  margin-top: 15px;
+}
 .contributors span {
   margin-right: 10px;
   color:white;
-  margin-bottom:15px ;
+  
 }
 
 .contributors span :hover{
@@ -176,7 +180,6 @@ footer {
   color: white;
   font-size: 20px;
   transition: color 0.3s ease;
-  margin-bottom:15px ;
 }
 
 .follow-us a:hover {
