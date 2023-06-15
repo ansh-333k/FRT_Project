@@ -218,7 +218,6 @@ footer {
 
 .destination {
 display: flex;
-align-items:center;
 white-space: nowrap;
 }
 
@@ -286,4 +285,5 @@ margin-right: 10px;
   border-radius: 5px;
   font-size: 16px;
   margin-left: auto;
+  align-items:flex-end;
 }
