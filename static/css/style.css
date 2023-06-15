@@ -151,7 +151,7 @@ footer {
 }
 
 .container {
-  height: 95px;
+  height: 150px;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -159,6 +159,7 @@ footer {
 .contributors span {
   margin-right: 10px;
   color:white;
+  margin-bottom:15px ;
 }
 
 .contributors span :hover{
@@ -167,6 +168,7 @@ footer {
 
 .follow-us{
   color:white;
+  margin-bottom:15px ;
 }
 .follow-us a {
   display: inline-block;
@@ -174,6 +176,7 @@ footer {
   color: white;
   font-size: 20px;
   transition: color 0.3s ease;
+  margin-bottom:15px ;
 }
 
 .follow-us a:hover {
@@ -183,6 +186,7 @@ footer {
 .footer-text p {
   margin: 5px 0;
   color: white;
+  margin-bottom:15px ;
 }
 
 /*desc_html*/
@@ -286,4 +290,5 @@ margin-right: 10px;
   font-size: 16px;
   margin-left: auto;
   align-items:flex-end;
+  height: fit-content;
 }
