@@ -47,6 +47,7 @@ const Category = {
   data() {
     return {
       response: null,
+      activeIndex: 0,
     }
   },
   beforeCreate() {
@@ -63,16 +64,29 @@ const Category = {
     })
     .catch(error => { console.log(error) })
   },
+  mounted() {
+    this.startCarousel();
+  },
+  beforeDestroy() {
+    this.stopCarousel();
+  },
+  methods: {
+    startCarousel() {
+      this.carouselInterval = setInterval(() => {
+        this.activeIndex = (this.activeIndex + 1) % this.response.length;
+      }, 3000); // Set the interval duration (e.g., 3 seconds)
+    },
+    stopCarousel() {
+      clearInterval(this.carouselInterval);
+    },
+  },
   template: `
-    <div v-for="place in response" class="destination-card">
+    <div class="destination-card">
       <div class="carousel-group">
         <div class="carousel">
-          <div class="carousel-item active"><img :src="place.img1" alt="Image 1"></div>
-          <div class="carousel-item"><img :src="place.img2" alt="Image 2"></div>
-          <div class="carousel-item"><img :src="place.img3" alt="Image 3"></div>
-          <div class="carousel-item"><img :src="place.img4" alt="Image 4"></div>
-          <div class="carousel-item"><img :src="place.img5" alt="Image 5"></div>
-          <div class="carousel-item"><img :src="place.img6" alt="Image 6"></div>
+          <div v-for="(place, index) in response" :key="index" :class="{ 'carousel-item': true, 'active': index === activeIndex }">
+            <img :src="place.img1" :alt="'Image ' + (index + 1)">
+          </div>
         </div>
       </div>
       <div class="destination-details" style="background: linear-gradient(to top,rgb(0, 221, 255), #ffffff);">
@@ -100,4 +114,12 @@ const router = VueRouter.createRouter({
 })
 const app = Vue.createApp({})
 app.use(router)
+
+app.directive("carousel", {
+  mounted(el) {
+    el.classList.add("carousel");
+  },
+});
+
+
 app.mount('#app')
