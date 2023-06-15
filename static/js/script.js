@@ -83,12 +83,7 @@ const Category = {
         <p class="location">Location: {{ place.location }}</p>
         <p class="caption">{{ place.caption }}</p>
         <p class="best-time">Best Time to Visit: {{ place.best_time }}</p>
-        <p class="text">
-          {{ place.description.substring(0,300) }}
-          <span class="dots"> ...</span>
-          <span class="moreText">{{ place.description.substring(301) }}</span>
-        </p>
-        <button class="read-more-btn">Read More</button> 
+        <p class="text">{{ place.description }}</p>
       </div>
     </div>
   ` 
