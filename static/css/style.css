@@ -95,17 +95,36 @@ main {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.imgs-grid {
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .category {
   border-radius: 10px;
   text-align: center;
   background-color: white;
 }
+
+.imgs {
+  border-radius: 10px;
+  text-align: center;
+  background-color: white;
+}
+
 .category :hover{
   transform: translateY(-6px);
   transform:  scale(0.75,0.75);
 }
 
 .category img {
+  width: 100%;
+  height: 250px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.imgs img {
   width: 100%;
   height: 250px;
   padding-left: 10px;

@@ -65,13 +65,13 @@ const Category = {
   },
   template: `
     <div v-for="place in response" class="destination-card">
-    <div class="category-grid">
-          <div><img :src="place.img1" alt="Image 1"></div>
-          <div><img :src="place.img2" alt="Image 2"></div>
-          <div><img :src="place.img3" alt="Image 3"></div>
-          <div><img :src="place.img4" alt="Image 4"></div>
-          <div><img :src="place.img5" alt="Image 5"></div>
-          <div><img :src="place.img6" alt="Image 6"></div>
+    <div class="imgs-grid">
+          <div class="imgs"><img :src="place.img1" alt="Image 1"></div>
+          <div class="imgs"><img :src="place.img2" alt="Image 2"></div>
+          <div class="imgs"><img :src="place.img3" alt="Image 3"></div>
+          <div class="imgs"><img :src="place.img4" alt="Image 4"></div>
+          <div class="imgs"><img :src="place.img5" alt="Image 5"></div>
+          <div class="imgs"><img :src="place.img6" alt="Image 6"></div>
     </div>
       <div class="destination-details" style="background: linear-gradient(to top,rgb(0, 221, 255), #ffffff);">
         <div class="destination">
