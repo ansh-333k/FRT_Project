@@ -17,6 +17,28 @@
 - Get an idea about the beauty of the place with beautiful images provided for each destination.
 - Interactive Interface: Enjoy a user-friendly interface that enhances the browsing experience.
 
+
+## Azure Cloud Platform
+
+Azure is a cloud computing platform and service provided by Microsoft. It offers a wide range of cloud-based services and solutions that help developers and businesses build, deploy, and manage applications and services with ease. Azure provides a scalable, reliable, and secure infrastructure for hosting and running applications, allowing seamless integration with various services and tools.
+
+## Azure Services Used in our project
+
+Trawell utilizes the following Azure services:
+
+### Azure Blob Storage
+
+Azure Blob Storage is a scalable and secure cloud storage service provided by Azure. It is used in Trawell for storing and serving images of tourist places. Blob Storage provides reliable storage and high-performance access to images, allowing efficient retrieval and delivery to users. With Blob Storage, you can easily manage and distribute image assets to enhance the visual experience of your application.
+
+### Azure Cosmos DB
+
+Azure Cosmos DB is a globally distributed, multi-model database service provided by Azure. In Trawell, Azure Cosmos DB is used as a MongoDB-based database service for storing and retrieving place information. Cosmos DB offers low-latency, scalable, and highly available data storage with support for various data models and APIs. It provides seamless global distribution, automatic indexing, and comprehensive SLAs for guaranteed performance and availability.
+
+### Azure App Service
+
+Azure App Service is a fully managed platform-as-a-service (PaaS) offering provided by Azure. It is used in Trawell for deploying and hosting the backend of the website. Azure App Service simplifies the process of deploying web applications, providing scalability, automatic OS patching, and seamless integration with other Azure services. With App Service, you can focus on developing your application without worrying about the underlying infrastructure.
+
+
 ## Installation
 
 To run the Trawell website locally, follow these steps:
