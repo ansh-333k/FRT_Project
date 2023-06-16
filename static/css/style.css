@@ -296,9 +296,9 @@ margin-right: 10px;
   width: 100%;
 }
 .images img {
- height:350px;
- width:738px;
-  transition: all 0.0s ease;
+ height:100%;
+ width:100%;
+  transition: all 0.25s ease;
 }
 .images input {
   display: none;
