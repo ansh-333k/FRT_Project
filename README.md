@@ -26,6 +26,10 @@ Azure is a cloud computing platform and service provided by Microsoft. It offers
 
 Trawell utilizes the following Azure services:
 
+### Azure App Service
+
+Azure App Service is a fully managed platform-as-a-service (PaaS) offering provided by Azure. It is used in Trawell for deploying and hosting the backend of the website. Azure App Service simplifies the process of deploying web applications, providing scalability, automatic OS patching, and seamless integration with other Azure services. With App Service, you can focus on developing your application without worrying about the underlying infrastructure.
+
 ### Azure Blob Storage
 
 Azure Blob Storage is a scalable and secure cloud storage service provided by Azure. It is used in Trawell for storing and serving images of tourist places. Blob Storage provides reliable storage and high-performance access to images, allowing efficient retrieval and delivery to users. With Blob Storage, you can easily manage and distribute image assets to enhance the visual experience of your application.
@@ -33,10 +37,6 @@ Azure Blob Storage is a scalable and secure cloud storage service provided by Az
 ### Azure Cosmos DB
 
 Azure Cosmos DB is a globally distributed, multi-model database service provided by Azure. In Trawell, Azure Cosmos DB is used as a MongoDB-based database service for storing and retrieving place information. Cosmos DB offers low-latency, scalable, and highly available data storage with support for various data models and APIs. It provides seamless global distribution, automatic indexing, and comprehensive SLAs for guaranteed performance and availability.
-
-### Azure App Service
-
-Azure App Service is a fully managed platform-as-a-service (PaaS) offering provided by Azure. It is used in Trawell for deploying and hosting the backend of the website. Azure App Service simplifies the process of deploying web applications, providing scalability, automatic OS patching, and seamless integration with other Azure services. With App Service, you can focus on developing your application without worrying about the underlying infrastructure.
 
 
 ## Installation
