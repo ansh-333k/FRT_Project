@@ -64,6 +64,7 @@ const Category = {
     .catch(error => { console.log(error) })
   },
   template: `
+  <div v-for="place in response" class="destination-card">
   <div class="slider">
   <div class="images">
       <input type="radio" name="slide" id="img1" checked>
@@ -99,6 +100,7 @@ const Category = {
       <p class="best-time">Best Time to Visit: {{ place.best_time }}</p>
       <p class="text">{{ place.description }}</p>
     </div>      
+</div>
 </div>
   ` 
 }
