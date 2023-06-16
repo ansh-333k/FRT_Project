@@ -6,9 +6,10 @@
 	<a href="https://tra-well.azurewebsites.net">Live link</a>
 </div>
 
-[![Trawell Preview](./pictures/welcoming-page.png)]
-[![Trawell Preview](./pictures/welcoming-page.png)]
-[![Trawell Preview](./pictures/welcoming-page.png)]
+## Web View
+![Trawell Preview](./.images/trawell1.PNG)
+![Trawell Preview](./.images/trawell2.PNG)
+![Trawell Preview](./.images/trawell3.PNG)
 
 ## Features
 
