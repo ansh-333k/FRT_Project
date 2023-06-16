@@ -317,7 +317,7 @@ margin-right: 10px;
   transition: all 0.15s ease;
   margin: 5px;
 }
-.dots label:hover {background: #fff;}
+.dots label:hover {background: rgba(0, 255, 225, 0.541);}
 #img1:checked ~ .m1 {
   margin-left: 0%;
 }
