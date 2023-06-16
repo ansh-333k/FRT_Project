@@ -64,26 +64,42 @@ const Category = {
     .catch(error => { console.log(error) })
   },
   template: `
-    <div v-for="place in response" class="destination-card">
-    <div class="imgs-grid">
-          <div class="imgs"><img :src="place.img1" alt="Image 1"></div>
-          <div class="imgs"><img :src="place.img2" alt="Image 2"></div>
-          <div class="imgs"><img :src="place.img3" alt="Image 3"></div>
-          <div class="imgs"><img :src="place.img4" alt="Image 4"></div>
-          <div class="imgs"><img :src="place.img5" alt="Image 5"></div>
-          <div class="imgs"><img :src="place.img6" alt="Image 6"></div>
-    </div>
-      <div class="destination-details" style="background: linear-gradient(to top,rgb(0, 221, 255), #ffffff);">
-        <div class="destination">
-          <h2 class="destination-name">{{ place.name }}</h2>
-          <div class="rating">Rating: {{ place.rating }}/5</div>
-        </div>
-        <p class="location">Location: {{ place.location }}</p>
-        <p class="caption">{{ place.caption }}</p>
-        <p class="best-time">Best Time to Visit: {{ place.best_time }}</p>
-        <p class="text">{{ place.description }}</p>
+  <div class="slider">
+  <div class="images">
+      <input type="radio" name="slide" id="img1" checked>
+      <input type="radio" name="slide" id="img2">
+      <input type="radio" name="slide" id="img3">
+      <input type="radio" name="slide" id="img4">
+      <input type="radio" name="slide" id="img5">
+      <input type="radio" name="slide" id="img6">
+
+      <div class="m1"><img src="./1.jpg" alt="Image 1"></div>
+      <div class="m2"><img src="./2.jpg" alt="Image 2"></div>
+      <div class="m3"><img src="./3.jpg" alt="Image 3"></div>
+      <div class="m4"><img src="./4.jpg" alt="Image 4"></div>
+      <div class="m5"><img src="./5.jpg" alt="Image 5"></div>
+      <div class="m6"><img src="./6.jpg" alt="Image 6"></div>
+
+  </div>
+  <div class="dots">
+      <label for="img1"></label>
+      <label for="img2"></label>
+      <label for="img3"></label>
+      <label for="img4"></label>
+      <label for="img5"></label>
+      <label for="img6"></label>
+  </div>
+  <div class="destination-details" style="background: linear-gradient(to top,rgb(0, 221, 255), #ffffff);">
+      <div class="destination">
+        <h2 class="destination-name">{{ place.name }}</h2>
+        <div class="rating">Rating: {{ place.rating }}/5</div>
       </div>
-    </div>
+      <p class="location">Location: {{ place.location }}</p>
+      <p class="caption">{{ place.caption }}</p>
+      <p class="best-time">Best Time to Visit: {{ place.best_time }}</p>
+      <p class="text">{{ place.description }}</p>
+    </div>      
+</div>
   ` 
 }
 
