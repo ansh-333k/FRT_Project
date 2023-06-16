@@ -1,5 +1,5 @@
 <div align="center">
-	<a href="https://tra-well.azurewebsites.net"><img src="./.images/bannerimage.png"></a>
+	<a href="https://tra-well.azurewebsites.net"><img src="./.images/banner.png"></a>
 	<h1>Trawell</h1>
 	<h2>Microsoft Future Ready Talent Project</h2>
 	<h4>Trawell is a website that allows users to explore different tourist places in India. It provides information about famous tourist destinations, including their names, locations, descriptions, images, ratings, and the best time to visit each place.</h4>
@@ -10,7 +10,7 @@
 ![Trawell Preview](./.images/trawell1.PNG)
 ![Trawell Preview](./.images/trawell2.PNG)
 ![Trawell Preview](./.images/trawell3.PNG)
-![Trawell Preview](./.images/trawell.png)
+![Trawell Preview](./.images/trawell4.png)
 
 ## Features
 
