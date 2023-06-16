@@ -73,12 +73,12 @@ const Category = {
       <input type="radio" name="slide" id="img5">
       <input type="radio" name="slide" id="img6">
 
-      <div class="m1"><img src="./1.jpg" alt="Image 1"></div>
-      <div class="m2"><img src="./2.jpg" alt="Image 2"></div>
-      <div class="m3"><img src="./3.jpg" alt="Image 3"></div>
-      <div class="m4"><img src="./4.jpg" alt="Image 4"></div>
-      <div class="m5"><img src="./5.jpg" alt="Image 5"></div>
-      <div class="m6"><img src="./6.jpg" alt="Image 6"></div>
+      <div class="m1"><img src="place.img1" alt="Image 1"></div>
+      <div class="m2"><img src="place.img2" alt="Image 2"></div>
+      <div class="m3"><img src="place.img3" alt="Image 3"></div>
+      <div class="m4"><img src="place.img4" alt="Image 4"></div>
+      <div class="m5"><img src="place.img5" alt="Image 5"></div>
+      <div class="m6"><img src="place.img6" alt="Image 6"></div>
 
   </div>
   <div class="dots">
